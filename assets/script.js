@@ -36,7 +36,7 @@ document.getElementById('add-gb').addEventListener('click', function() {
     gb++
         gbtotal.textContent = gb 
         total.textContent = sugar + gb + cc
-        console.log('higb')
+        console.log('add-gb')
 })
 
 /////// code to remove gb
@@ -46,7 +46,7 @@ document.getElementById('minus-gb').addEventListener('click', function() {
     else;
     gbtotal.textContent = gb
     total.textContent = sugar + gb + cc
-    console.log('byegb')
+    console.log('remove-gb')
     if(gb<0)
     gbtotal.textContent=0;
     if(gb+cc+sugar<0)
@@ -59,7 +59,7 @@ document.getElementById('add-cc').addEventListener('click', function() {
     cc++
     cctotal.textContent = cc
     total.textContent = sugar + gb + cc
-    console.log('hicc')
+    console.log('add-cc')
 })
 
 
@@ -70,7 +70,7 @@ document.getElementById('minus-cc').addEventListener('click', function() {
     else;
     cctotal.textContent = cc
     total.textContent = sugar + gb + cc
-    console.log('byecc')
+    console.log('remove-cc')
     if(cc<0)
     cctotal.textContent=0;
     if(gb+cc+sugar<0)
@@ -82,6 +82,16 @@ document.getElementById('add-sugar').addEventListener('click', function() {
     sugar++
     sugartotal.textContent = sugar
     total.textContent = sugar + gb + cc
-    console.log('hisugar')
+    console.log('add-sugar')
 
+})
+
+/////removing sugar
+document.getElementById('minus-sugar').addEventListener('click', function() {
+    if(sugar > 0)
+    sugar--;
+    else;
+    sugartotal.textContent = sugar
+    total.textContent = sugar + gb + cc
+    console.log('remove-sugar')
 })
