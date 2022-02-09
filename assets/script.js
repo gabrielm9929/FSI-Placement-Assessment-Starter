@@ -34,8 +34,8 @@ console.log('Gingerbread + button was clicked!')
 
 document.getElementById('add-gb').addEventListener('click', function() {   
     gb++
-        gbtotal.textContent=gb 
-        total.textContent=sugar+gb+cc
+        gbtotal.textContent = gb 
+        total.textContent = sugar + gb + cc
         console.log('higb')
 })
 
@@ -44,8 +44,8 @@ document.getElementById('minus-gb').addEventListener('click', function() {
     if(gb > 0)
     gb--;
     else;
-    gbtotal.textContent=gb
-    total.textContent=sugar+gb+cc
+    gbtotal.textContent = gb
+    total.textContent = sugar + gb + cc
     console.log('byegb')
     if(gb<0)
     gbtotal.textContent=0;
@@ -57,8 +57,31 @@ document.getElementById('minus-gb').addEventListener('click', function() {
 ////// code to add cc
 document.getElementById('add-cc').addEventListener('click', function() {
     cc++
-    cctotal.textContent=cc
-    total.textContent=sugar+gb+cc
+    cctotal.textContent = cc
+    total.textContent = sugar + gb + cc
     console.log('hicc')
 })
 
+
+///// code to remove cc
+document.getElementById('minus-cc').addEventListener('click', function() {
+    if(cc > 0)
+    cc--;
+    else;
+    cctotal.textContent = cc
+    total.textContent = sugar + gb + cc
+    console.log('byecc')
+    if(cc<0)
+    cctotal.textContent=0;
+    if(gb+cc+sugar<0)
+    total.textContent=0;
+})
+
+///// adding sugar sprinkle 
+document.getElementById('add-sugar').addEventListener('click', function() {
+    sugar++
+    sugartotal.textContent = sugar
+    total.textContent = sugar + gb + cc
+    console.log('hisugar')
+
+})
